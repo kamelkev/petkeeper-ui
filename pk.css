@@ -1,0 +1,297 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+body {
+    background-color: #ffffff;
+    color: #515b6d;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body.login {
+    background-color: #1b1e26;
+}
+
+body.busy,
+body.busy .btn {
+    cursor: wait !important;
+}
+
+.bg-dark {
+    background-color: #1b1e26 !important;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+a {
+    color: #655ed8;
+}
+
+a:hover {
+    color: #7c79db;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #1e2426;
+}
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+
+.btn-primary {
+    border-radius: 23px;
+    background: linear-gradient(to right,#a153df,#6562d5);
+    border-color: transparent;
+    font-weight: 600;
+    font-size: 1rem;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right,#ae71e1,#7c7dd8);
+    border-color: transparent;
+    transition-property: all;
+}
+
+.btn-secondary {
+    border-radius: 23px;
+    background: #655ed8;
+    border-color: transparent;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 30px;
+}
+
+.btn-secondary:hover {
+    background: #7c79db;
+    border-color: transparent;
+    transition-property: all;
+}
+
+.btn.focus, .btn:focus {
+    box-shadow: none;
+}
+
+.btn-secondary.focus, .btn-secondary:focus {
+    box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    background: linear-gradient(to right,#ae71e1,#7c7dd8);
+    border-color: transparent;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show > .btn-secondary.dropdown-toggle {
+    background: #655ed8;
+    border-color: transparent;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus
+.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .show > .btn-secondary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.login label {
+    color: #ffffff;
+}
+
+.form-control {
+    border-radius: 23px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    height: auto;
+    border: 1px solid #ced4da;
+    background-color: transparent;
+}
+
+.login .form-control {
+    border: 1px solid #353f43;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.form-control:focus {
+    background-color: transparent;
+    border-color: #655ed8;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(101,94,216,0.25);
+}
+
+.login .form-control:focus {
+    color: #ffffff;
+}
+
+.type-check {
+    margin-bottom: 40px;
+}
+
+.type-check [type="radio"], .gender-toggle [type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.pet-type-radio {
+    cursor: pointer;
+    border: 2px solid #4b5a5f;
+    padding: 15px;
+    border-radius: 39px;
+    margin-bottom: 5px;
+    width: 78px;
+    height: 78px;
+}
+
+.type-check [type=radio]:checked + .pet-type-radio {
+    border: 2px solid #655ed8;
+}
+
+[type=radio]:not(:checked) + .pet-type-radio {
+    opacity: .6;
+}
+
+.type-check label {
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.modal-dialog {
+    max-width: 450px;
+}
+
+.dog-check {
+    margin-right: 4.5rem;
+}
+
+.cat-check {
+    margin-right: 0;
+}
+
+.gender-toggle .form-check-inline {
+    width: 50%;
+    margin: 0;
+}
+
+.gender-toggle .form-check-inline label {
+    width: 100%;
+}
+
+.gender-toggle .form-check-inline .pet-gender-radio {
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 1px solid #8fa4b7;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.gender-toggle .pet-male .pet-gender-radio {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.gender-toggle .pet-female .pet-gender-radio {
+    border-left: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.gender-toggle [type=radio]:checked + .pet-gender-radio {
+   background-color: #4b5a5f;
+   color: #ffffff;
+}
+
+.custom-select {
+    padding: 11px;
+    height: auto;
+    border-radius: 23px;
+}
+
+.custom-select:focus {
+    border-color: #655ed8;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(101,94,216,0.25);
+}
+
+select#pet_age {
+    width: 50%;
+    display: block;
+}
+
+/*--------------------------------------------------------------
+# Tables
+--------------------------------------------------------------*/
+
+#pet_list.empty:after,
+#pet_list.loading:after {
+    content: 'You have no pets.';
+    display: block;
+    font-style: italic;
+    text-align: left;
+    padding-top: 1rem;
+}
+#pet_list.loading:after {
+    content: 'Loading...' !important;
+}
+
+.table {
+    font-size: 14px; 
+}
+
+.table td {
+    border-top: none;
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: middle;
+    padding: 1rem 0.75rem;
+}
+
+/*--------------------------------------------------------------
+# Modals
+--------------------------------------------------------------*/
+
+.login-panel .col {
+    padding-top: 120px;
+    max-width: 400px;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+    padding: 0.25rem 1rem 1.25rem 1rem;
+}
+
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+
+.navbar {
+    padding: 0.7rem 1rem;
+}
+
+.logo {
+    margin-bottom: 60px;
+}
